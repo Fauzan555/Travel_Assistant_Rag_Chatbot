@@ -38,8 +38,16 @@ The repository contains two main components:
 ### 1. Loading and Splitting Documents
 We load the knowledge base from a `.txt` file containing Toronto travel information:
 
-```python
-loader = TextLoader('./materials/torontoTravelAssistant.txt')
-documents = loader.load()
-text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=4)
-docs = text_splitter.split_documents(documents)
+# Project Structure
+.
+├── materials/
+│   └── torontoTravelAssistant.txt    # Knowledge base
+├── RAG_ChatBot.py                    # Chatbot backend
+├── streamlitMain.py                  # Streamlit frontend
+├── .env                              # Environment variables
+├── requirements.txt                  # Python dependencies
+└── README.md                         # Project documentation
+
+# Installation
+git clone https://github.com/your-username/toronto-travel-assistant.git
+cd toronto-travel-assistant
